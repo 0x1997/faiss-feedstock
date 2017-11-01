@@ -1,0 +1,25 @@
+package:
+  name: faiss
+  version: 20171027
+
+source:
+  git_url: https://github.com/facebookresearch/faiss.git
+  git_rev: 2eb8eb9915ad4eeb862e6fcd316bc6cfeb54ffd3
+
+build:
+  # If the installation is complex, or different between Unix and Windows, use
+  # separate bld.bat and build.sh files instead of this key.  Add the line
+  # "skip: True  # [py<35]" (for example) to limit to Python 3.5 and newer, or
+  # "skip: True  # [not win]" to limit to Windows.
+
+requirements:
+  build:
+    - python
+    - mkl >=2018.*
+    - numpy >=1.13.*
+    - swig
+    - toolchain
+  run:
+    - python
+    - mkl >=2018.*
+    - numpy >=1.13.*

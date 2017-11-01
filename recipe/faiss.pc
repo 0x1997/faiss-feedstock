@@ -1,0 +1,10 @@
+prefix=/opt/anaconda1anaconda2anaconda3
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: faiss
+Description: A library for efficient similarity search and clustering of dense vectors.
+Version: 20171027
+Requires:
+Libs: -L${libdir} -lfaiss
+Cflags: -I${includedir}
